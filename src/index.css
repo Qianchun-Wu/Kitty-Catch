@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
+
+  --color-primary: #8d5460;
+  --color-primary-container: #feb6c4;
+  --color-on-primary: #ffffff;
+  --color-secondary: #7b5f45;
+  --color-secondary-container: #fed9b8;
+  --color-tertiary: #196d86;
+  --color-tertiary-container: #9ae1ff;
+  --color-background: #fffde7;
+  --color-surface-container-low: #fffde7;
+  --color-surface-container-highest: #fff9c4;
+  --color-on-surface: #39391b;
+  --color-on-surface-variant: #666643;
+  --color-outline-variant: #bdbb92;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body;
+  }
+}
+
+.pixel-shadow {
+  box-shadow: 0 12px 32px rgba(141, 84, 96, 0.08);
+}
+
+.macaron-button {
+  background: linear-gradient(to top, #8d5460, #feb6c4);
+}
+
+.chibi-cat-container, .pixel-art {
+  image-rendering: pixelated;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.animate-wobble {
+  animation: wobble 2s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.mix-multiply {
+  mix-blend-mode: multiply;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.1s ease-in-out infinite;
+}
